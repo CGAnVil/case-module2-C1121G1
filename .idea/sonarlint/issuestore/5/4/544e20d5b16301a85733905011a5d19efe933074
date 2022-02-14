@@ -1,0 +1,24 @@
+
+7	java:S131""Add a default case to this switch.(¨ÕÉ
+S	java:S106+"9Replace this use of System.out or System.err by a logger.(°†çğüÿÿÿÿ
+S	java:S1060"9Replace this use of System.out or System.err by a logger.(›¤Ê¶ùÿÿÿÿ
+S	java:S1061"9Replace this use of System.out or System.err by a logger.(ˆ„Œúÿÿÿÿ
+S	java:S1063"9Replace this use of System.out or System.err by a logger.(¦øƒ–ûÿÿÿÿ
+N	java:S1068"9Replace this use of System.out or System.err by a logger.(ú™äÉ
+S	java:S1069"9Replace this use of System.out or System.err by a logger.(££Øòúÿÿÿÿ
+N	java:S106>"9Replace this use of System.out or System.err by a logger.(ƒ˜Õ
+N	java:S106@"9Replace this use of System.out or System.err by a logger.(ÍÆƒ
+S	java:S106E"9Replace this use of System.out or System.err by a logger.(íçÓ‡şÿÿÿÿ
+N	java:S106F"9Replace this use of System.out or System.err by a logger.(®¶œ
+S	java:S106G"9Replace this use of System.out or System.err by a logger.(°ø»©ùÿÿÿÿ
+S	java:S106H"9Replace this use of System.out or System.err by a logger.(ÿÖ¸ÿÿÿÿÿ
+M	java:S106I"9Replace this use of System.out or System.err by a logger.(æÉ¦6
+S	java:S106J"9Replace this use of System.out or System.err by a logger.(¥æˆÛüÿÿÿÿ
+S	java:S106K"9Replace this use of System.out or System.err by a logger.(İôêéÿÿÿÿÿ
+Z	java:S106L"9Replace this use of System.out or System.err by a logger.(çÔ²Áúÿÿÿÿ8îµ€Àî/
+U	java:S106R"9Replace this use of System.out or System.err by a logger.(×úÅ8éãÀî/
+Z	java:S106T"9Replace this use of System.out or System.err by a logger.(À€Îƒÿÿÿÿÿ8á€ƒÀî/
+Z	java:S106["9Replace this use of System.out or System.err by a logger.(ê²ÿÒÿÿÿÿÿ8Ë›…Àî/
+Z	java:S106a"9Replace this use of System.out or System.err by a logger.(¾ÁÉ·şÿÿÿÿ8Ë›…Àî/
+U	java:S106h"9Replace this use of System.out or System.err by a logger.(Ş•‰û8Ì›…Àî/
+Z	java:S106j"9Replace this use of System.out or System.err by a logger.(İ¡ñüşÿÿÿÿ8Ì›…Àî/
