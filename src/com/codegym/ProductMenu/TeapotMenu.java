@@ -74,7 +74,7 @@ public class TeapotMenu {
     }
 
     private void menu() {
-        System.out.println("--Quản lý sản phầm ấm trà");
+        System.out.println("--Quản lý sản phầm ấm trà--");
         System.out.println("1. Hiển thị danh sách ấm trà");
         System.out.println("2. Thêm sản phẩm mới ");
         System.out.println("3. Sửa nội dung sản phẩm");
@@ -126,9 +126,7 @@ public class TeapotMenu {
         }
     }
 
-    public static void main(String[] args) {
-
-    }
+    
 }
 
 

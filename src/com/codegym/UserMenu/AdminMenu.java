@@ -1,10 +1,11 @@
 package com.codegym.UserMenu;
 
 import com.codegym.UserController.UserManagement;
+import com.codegym.UserModel.User;
 
 import java.util.Scanner;
 
-public class UserManageMenu {
+public class AdminMenu {
     Scanner scanner = new Scanner(System.in);
     UserManagement userManagement = new UserManagement();
 
@@ -32,11 +33,41 @@ public class UserManageMenu {
                     break;
                 }
                 case 4: {
-                    System.out.println("Nhập ");
+                    showUpdateMeber(userManagement);
+                    break;
                 }
+
+                case 5: {
+                    showDeleteByName(userManagement);
+                    break;
+                }
+
 
             }
         } while (choice != 0);
+    }
+
+    private void showUpdateMeber(UserManagement userManagement) {
+        System.out.println("--Sửa thông tin thành viên--");
+        System.out.println("Nhập tên thành viên cần sửa");
+        String userName = scanner.nextLine();
+        if (userManagement.checkExistByName(userName)) {
+            User changeUser = userManagement.addNewUserByAdmin();
+            userManagement.updateById(userName, changeUser);
+            System.out.println("Sửa thông tin thành công");
+        } else {
+            System.out.println("Tên thành viên không tồn tại");
+        }
+    }
+
+    private void showDeleteByName(UserManagement userManagement) {
+
+        System.out.println("Nhập tên người dùng cần xóa");
+        String userName = scanner.nextLine();
+        if (userManagement.deleteById(userName)) {
+            System.out.println("Xóa thành công");
+        }
+        System.out.println("Không tồn tại tên người dùng");
     }
 
 
@@ -68,11 +99,13 @@ public class UserManageMenu {
     }
 
     public static void main(String[] args) {
-        UserManageMenu userManageMenu = new UserManageMenu();
+        AdminMenu userManageMenu = new AdminMenu();
         userManageMenu.run();
     }
 
     public void showAddNewUserByAdmin(UserManagement userManagement) {
         userManagement.addNew(userManagement.addNewUserByAdmin());
     }
+
+
 }

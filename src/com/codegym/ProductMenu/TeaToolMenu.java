@@ -72,7 +72,7 @@ public class TeaToolMenu {
     }
 
     private void menu() {
-        System.out.println("--Quản lý sản phầm trà cụ");
+        System.out.println("--Quản lý sản phầm trà cụ--");
         System.out.println("1. Hiển thị danh sách trà cụ");
         System.out.println("2. Thêm sản phẩm mới ");
         System.out.println("3. Sửa nội dung sản phẩm");

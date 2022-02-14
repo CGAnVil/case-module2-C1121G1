@@ -73,7 +73,7 @@ public class TeaManageMenu {
     }
 
     private void menu() {
-        System.out.println("--Quản lý sản phầm trà");
+        System.out.println("--Quản lý sản phầm trà--");
         System.out.println("1. Hiển thị danh sách trà");
         System.out.println("2. Thêm sản phẩm mới ");
         System.out.println("3. Sửa nội dung sản phẩm");
@@ -114,6 +114,11 @@ public class TeaManageMenu {
         if (index != -1) {
             Tea tea = teaManagement.inputTeaInfo();
             teaManagement.updateById(productID, tea);
+            try {
+                teaManagement.writeFile("tea.txt");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             System.out.println("Sửa thành công");
         } else {
             System.out.println("Sửa không thành công do không tồn tại mã sản phẩm");

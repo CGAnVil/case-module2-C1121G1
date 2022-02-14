@@ -80,7 +80,6 @@ public class TeaManagement implements GeneralManagement<Tea> {
     public Tea inputTeaInfo() {
 
         System.out.println("Nhập mã sản phẩm");
-
         String teaId = scanner.nextLine();
         System.out.println("Nhập tên sản phẩm");
         String teaName = scanner.nextLine();

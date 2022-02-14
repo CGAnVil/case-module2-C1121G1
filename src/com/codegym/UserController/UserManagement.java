@@ -12,6 +12,17 @@ public class UserManagement implements GeneralManagement<User> {
     Scanner scanner = new Scanner(System.in);
     List<User> listUser = new ArrayList<>();
 
+    public UserManagement() {
+        File file = new File("user.txt");
+        if (file.exists()) {
+            try {
+                readFile("user.txt");
+            } catch (IOException | ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
     @Override
     public void displayAll() {
         for (User user : listUser
@@ -28,12 +39,17 @@ public class UserManagement implements GeneralManagement<User> {
     }
 
     @Override
-    public void updateById(String id, User user) {
-
+    public void updateById(String userName, User user) {
+        listUser.set(getIndexByName(userName), user);
     }
 
     @Override
-    public boolean deleteById(String id) {
+    public boolean deleteById(String username) {
+        int index = getIndexByName(username);
+        if (index != -1) {
+            listUser.remove(index);
+            return true;
+        }
         return false;
     }
 
@@ -141,5 +157,17 @@ public class UserManagement implements GeneralManagement<User> {
 
         }
     }
+
+    public int getIndexByName(String userName) {
+        int index = -1;
+        for (int i = 0; i < listUser.size(); i++) {
+            if (listUser.get(i).getUserName().equals(userName)) {
+                index = i;
+                break;
+            }
+        }
+        return index;
+    }
+
 
 }
