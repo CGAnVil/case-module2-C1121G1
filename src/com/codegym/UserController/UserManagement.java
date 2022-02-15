@@ -119,7 +119,7 @@ public class UserManagement implements GeneralManagement<User> {
 
     public boolean checkValidRole(String role) {
 
-        if (role == "Admin" || role == "Member" || role == "Staff") {
+        if (role.equals("Admin") || role.equals("Member") || role.equals("Staff")) {
             return true;
         }
         return false;
@@ -139,6 +139,11 @@ public class UserManagement implements GeneralManagement<User> {
         if (checkExistByName(userName) || checkExistByID(userID)) {
             System.out.println("Tên hoặc Id đã tồn tại");
         } else if (checkValidRole(role)) {
+            try {
+                writeFile("user.txt");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             newUser = new User(userID, userName, password, role);
             System.out.println("Tạo người dùng mới thành công");
         } else {
@@ -169,5 +174,7 @@ public class UserManagement implements GeneralManagement<User> {
         return index;
     }
 
-
+    public String getRoleByName(String userName) {
+        return listUser.get(getIndexByName(userName)).getRole();
+    }
 }
